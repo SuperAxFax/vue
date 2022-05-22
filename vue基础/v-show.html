@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+       <input type="button" value="切换显示状态" @click="changeIsShow">
+       <h1 v-show="isShow">恭喜发财</h1>
+       <input type="button" value="累加年龄" @click="addAge">
+       <h1 v-show="age<18">年纪小于18</h1>
+    </div>
+    <script src="vue.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        var app = new Vue({
+            el:"#app",
+            data:{
+               isShow:false,
+               age:15
+            },
+            methods: {
+                changeIsShow:function(){
+                this.isShow = !this.isShow;
+                },
+                addAge:function(){
+                 this.age++;
+            }
+            },
+            
+        })
+    </script>
+</body>
+</html>

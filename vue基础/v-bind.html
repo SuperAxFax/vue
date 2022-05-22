@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-bind</title>
+</head>
+<body>
+    <div id="app">
+       <img v-bind:src="imgsrc">
+       <img :src="imgsrc" alt="" :title="title" >
+    </div>
+    <!-- img中alt属性的作用是：如果无法显示图像，浏览器将显示替代文本。 -->
+    <script src="vue.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        var app = new Vue({
+            el:"#app",
+            data:{
+              imgsrc:"https://www.itheima.com/images/logo.png",
+              title: "superfax",
+              isactive:false
+            }
+            
+        })
+    </script>
+</body>
+</html>
